@@ -165,4 +165,57 @@ body {
       font-size: 16px;
     }
   }
+/* Fixed social media icons */
+.social-links {
+  position: fixed;
+  left: 55px;
+  top: 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 1000;
+}
+
+.social-links a {
+  color: white;
+  width: 22px;
+  height: 22px;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  opacity: 1;
+}
+
+.social-links svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Slightly wider shape for IMDb */
+.social-links a[aria-label="IMDb"] {
+  width: 30px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .social-links {
+    left: 20px;
+    top: 150px;
+    gap: 14px;
+  }
+
+  .social-links a {
+    width: 19px;
+    height: 19px;
+  }
+
+  .social-links a[aria-label="IMDb"] {
+    width: 27px;
+  }
+}
   
